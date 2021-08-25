@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 3.19)
+project(HowManyCharIsDuplicated_with_tests)
+
+set(CMAKE_CXX_STANDARD 14)
+add_subdirectory(lib/googletest-master)
+include_directories(lib/googletest-master/googletest/include)
+include_directories(lib/googletest-master/googlemock/include)
+
+add_executable(HowManyCharIsDuplicated_with_tests main.cpp TESTS_HowManyCharIsDuplicated.cpp HowManyCharIsDuplicated.h)
+target_link_libraries(HowManyCharIsDuplicated_with_tests gtest gtest_main)
